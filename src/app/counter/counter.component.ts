@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { increment, decrement, reset } from './actions';
 import { selectCounter } from './selector';
 
@@ -12,21 +12,18 @@ import { selectCounter } from './selector';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-  count$: Observable<number>;
-
-  constructor(private store: Store) {
-    this.count$ = store.select(selectCounter);
-  }
+  private countSubject = new BehaviorSubject<number>(0);
+  count$ = this.countSubject.asObservable();
 
   increment() {
-    this.store.dispatch(increment());
+    this.countSubject.next(this.countSubject.value + 1);
   }
 
   decrement() {
-    this.store.dispatch(decrement());
+    this.countSubject.next(this.countSubject.value - 1);
   }
 
   reset() {
-    this.store.dispatch(reset());
+    this.countSubject.next(0);
   }
 }
