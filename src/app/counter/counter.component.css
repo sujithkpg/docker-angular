@@ -1,6 +1,23 @@
 .counter-container {
+  display: flex;
   text-align: center;
-  margin-top: 50px;
+  background-color: rgb(8, 8, 78);
+  height: 10vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 6px;
+}
+.header-content{
+  font-size: 1em;
+  color: white;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+.header-content:hover{
+  font-size: 1em;
+  color: rgb(212, 203, 203);
 }
 
 button {

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    border: 2px solid black;
+    height: 90vh;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: red;
+    text-align: center;
+    font-size: 8em;
+}
