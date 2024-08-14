@@ -6,8 +6,8 @@ import { AnimalServiceService } from '../animal-service.service';
   standalone: true,
   imports: [],
   templateUrl: './cat.component.html',
-  styleUrl: './cat.component.css',
-  providers: [AnimalServiceService]
+  styleUrl: './cat.component.css'
+  // providers: [AnimalServiceService]
 })
 export class CatComponent implements OnInit {
 

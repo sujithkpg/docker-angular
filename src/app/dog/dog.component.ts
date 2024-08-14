@@ -6,8 +6,8 @@ import { AnimalServiceService } from '../animal-service.service';
   standalone: true,
   imports: [],
   templateUrl: './dog.component.html',
-  styleUrl: './dog.component.css',
-  providers: [AnimalServiceService]
+  styleUrl: './dog.component.css'
+  // providers: [AnimalServiceService]
 })
 export class DogComponent implements OnInit {
   name:string='';
@@ -19,5 +19,9 @@ export class DogComponent implements OnInit {
   ngOnInit(): void {
     this.animalService.setName("Dog:Batte");
     this.name = this.animalService.getName();
+  }
+  getName()
+  {
+    return this.animalService.getName();
   }
 }

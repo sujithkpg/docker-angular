@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { CatComponent } from './cat/cat.component';
 import { DogComponent } from './dog/dog.component';
 
-@Injectable()
+@Injectable({
+  providedIn:'root'
+})
 export class AnimalServiceService {
   private name: string = '';
 
